@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout android:layout_width="match_parent"
+    android:id="@+id/call_history_user_layout"
+    android:layout_height="80dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:background="#1C1B1B">
+
+
+
+    <RelativeLayout
+        android:id="@+id/image_layout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+    <FrameLayout
+        android:id="@+id/image_frame"
+        android:layout_margin="10dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:id="@+id/caller_photo"
+        android:src="@drawable/man"
+        android:layout_gravity="center"
+        />
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:layout_width="10dp"
+        android:layout_height="10dp"
+        android:src="@drawable/status"
+        android:layout_gravity="bottom|right"
+        android:id="@+id/status_icon"
+        android:layout_marginBottom="3dp"
+        android:layout_marginRight="5dp"/>
+
+    </FrameLayout>
+    </RelativeLayout>
+
+        <RelativeLayout
+
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+
+            android:layout_toRightOf="@id/image_layout"
+            >
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true">
+            <TextView
+                android:id="@+id/caller_name"
+                android:text="Janet Fowler"
+                android:textColor="@color/white"
+                android:textSize="18sp"
+
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_below="@id/caller_name">
+
+                <TextView
+                    android:id="@+id/call_type"
+                    android:text="inbound - "
+
+                    android:textSize="13sp"
+                    android:textColor="#CDCDCD"
+
+
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/time_stamp"
+                    android:text="10:21"
+                    android:textColor="#CDCDCD"
+                    android:textSize="13sp"
+                    />
+            </LinearLayout>
+
+
+            </RelativeLayout>
+
+        <ImageView
+            android:layout_width="15dp"
+            android:layout_height="15dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:id="@+id/call_type_icon"
+            android:layout_marginRight="15dp"
+            android:src="@drawable/outgoing"/>
+
+
+
+            <View
+                android:layout_alignParentBottom="true"
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:background="@color/white"
+                android:layout_marginBottom="2dp"
+
+
+                />
+        </RelativeLayout>
+
+
+</RelativeLayout>

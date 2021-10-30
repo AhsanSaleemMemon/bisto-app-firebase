@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="#161515"
+
+    >
+    <RelativeLayout
+
+        android:background="@drawable/box2"
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+
+        android:id="@+id/user_info">
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:layout_width="40dp"
+            android:layout_centerVertical="true"
+            android:layout_height="40dp"
+            android:src="@drawable/man"
+            android:id="@+id/user_photo"
+            android:layout_marginLeft="10dp"
+            android:maxHeight="50dp"
+            android:maxWidth="50dp"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/user_name"
+            android:text="Ahsan Memon"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="15dp"
+            android:textColor="@color/white"
+            android:layout_toRightOf="@id/user_photo"/>
+
+        <TextView
+            android:id="@+id/edit_button"
+            android:layout_width="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="10dp"
+            android:text="Edit"
+            android:textColor="#017CEF"
+            android:textSize="18sp"
+            android:layout_height="wrap_content" />
+    </RelativeLayout>
+    <RelativeLayout
+        android:layout_below="@id/user_info"
+        android:id="@+id/new_entries"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+    <LinearLayout
+        android:layout_marginBottom="20dp"
+        android:layout_width="match_parent"
+        android:id="@+id/layout_2"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+
+
+        <ImageButton
+            android:id="@+id/addcontact_id"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:src="@drawable/addcontact"
+
+            />
+
+        <TextView
+            android:layout_marginLeft="10dp"
+            android:layout_gravity="center_vertical"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="New Contact"
+            android:textColor="@color/white"
+            />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_below="@id/layout_2"
+        android:id="@+id/layout_3"
+
+        >
+
+        <ImageButton
+            android:id="@+id/addgroup_id"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_below="@id/addcontact_id"
+            android:src="@drawable/addgroup"
+
+            />
+
+        <TextView
+            android:layout_marginLeft="10dp"
+            android:layout_gravity="center_vertical"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:text="New Group"
+            android:textColor="@color/white"
+            />
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_marginTop="20dp"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_below="@id/layout_3"
+        android:id="@+id/layout_4">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="CONTACTED FREQUENTLY"
+            android:textColor="@color/white"
+            />
+
+    </LinearLayout>
+
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/new_entries"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="20dp">
+    <androidx.recyclerview.widget.RecyclerView
+
+        android:id="@+id/contacts_recycler_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    </RelativeLayout>
+</RelativeLayout>

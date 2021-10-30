@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout android:layout_width="match_parent"
+    android:id="@+id/chat_user_layout"
+    android:layout_height="100dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:background="#0D0C0C">
+
+        <FrameLayout
+            android:id="@+id/image_frame"
+            android:layout_margin="10dp"
+            android:layout_width="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_height="wrap_content">
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:id="@+id/messenger_photo"
+                android:src="@drawable/man"
+                android:layout_gravity="center"
+                />
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:layout_width="10dp"
+                android:layout_height="10dp"
+                android:src="@drawable/status"
+                android:layout_gravity="bottom|right"
+                android:id="@+id/online_status"
+                android:layout_marginBottom="3dp"
+                android:layout_marginRight="5dp"/>
+
+        </FrameLayout>
+
+
+    <RelativeLayout
+
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+
+        android:layout_toRightOf="@id/image_frame"
+        >
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true">
+            <TextView
+                android:id="@+id/messenger_name"
+                android:text="Janet Fowler"
+                android:textColor="@color/white"
+                android:textSize="18sp"
+
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+
+            <TextView
+                android:id="@+id/last_message"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+
+                android:layout_below="@+id/messenger_name"
+                android:layout_marginTop="5dp"
+
+
+                android:text="I'm going to San Francisco ..."
+                android:textColor="#CDCDCD"
+                android:textSize="13sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:id="@+id/time_stamp"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:text="now"
+                android:textColor="@color/white"
+                android:layout_marginRight="15dp"
+
+                />
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:layout_width="12dp"
+                android:layout_height="12dp"
+                android:layout_alignParentRight="true"
+                android:layout_marginTop="10dp"
+
+                android:layout_below="@+id/time_stamp"
+
+                android:id="@+id/unread_msg_icon"
+                android:layout_marginRight="15dp"
+                android:src="#007EF4"/>
+
+        </RelativeLayout>
+
+
+
+    </RelativeLayout>
+
+
+</RelativeLayout>

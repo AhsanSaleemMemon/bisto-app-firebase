@@ -1,0 +1,140 @@
+<LinearLayout android:layout_height="match_parent"
+    android:layout_width="match_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+
+    android:background="#1C1B1B">
+
+    <LinearLayout
+        android:orientation="vertical"
+
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginLeft="40dp"
+        android:layout_marginRight="40dp">
+
+        <TextView
+            android:id="@+id/welcome_text"
+
+            android:layout_centerVertical="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Welcome back!"
+            android:fontFamily="@font/prompt_bold"
+            android:textColor="@color/white"
+            android:textSize="35dp"
+
+            />
+
+
+        <TextView
+
+            android:layout_below="@+id/welcome_text"
+            android:id="@+id/second_text"
+            android:layout_centerVertical="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Please login to your account"
+            android:fontFamily="@font/prompt_bold"
+            android:textColor="#939393"
+            android:textSize="20dp"
+
+            />
+
+        <EditText
+            android:layout_marginTop="20dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/email_input"
+            android:hint="Email Address"
+            android:textColorHint="#939393"
+            android:fontFamily="@font/prompt_bold"
+            android:backgroundTint="#1C1B1B">
+
+        </EditText>
+
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#939393"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            android:layout_marginTop="20dp">
+            <EditText
+
+                android:layout_width="wrap_content"
+                android:layout_weight="3"
+
+                android:layout_height="wrap_content"
+                android:id="@+id/pass_input"
+                android:hint="Password"
+                android:textColorHint="#939393"
+                android:fontFamily="@font/prompt_bold"
+                android:backgroundTint="#1C1B1B">
+
+            </EditText>
+
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+
+                android:text="Forgot?"
+                android:textColor="#6361A4"
+                android:backgroundTint="#1C1B1B"
+
+                android:textAllCaps="false"
+
+
+                ></Button>
+
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#939393"/>
+
+
+
+
+
+        <Button
+            android:id="@+id/login_btn"
+            android:layout_marginTop="30dp"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+
+
+            android:fontFamily="@font/prompt_bold"
+            android:backgroundTint="#193155"
+            android:text="LOGIN"
+            >
+
+        </Button>
+
+        <TextView
+            android:id="@+id/sign_up_page"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:textColor="@color/white"
+
+            android:textSize="20dp"
+            android:fontFamily="@font/prompt_bold"
+            android:layout_gravity="center"
+            android:text="REGISTER NOW"
+            />
+
+
+    </LinearLayout>
+
+
+
+
+</LinearLayout>

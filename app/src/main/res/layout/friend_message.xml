@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:layout_height="wrap_content"
+    android:layout_width="match_parent"
+
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout
+        android:layout_marginLeft="10dp"
+
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/friend_profile_image"
+            android:src="@drawable/receiver_image"
+            android:layout_gravity="bottom"
+            android:layout_marginRight="10dp"
+            android:layout_marginBottom="20dp"
+            android:layout_width="50dp"
+            android:layout_height="50dp"/>
+
+        <RelativeLayout
+            android:layout_toRightOf="@+id/reciever_image"
+            android:id="@+id/message_layout"
+            android:layout_width="wrap_content"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="20dp"
+            android:layout_height="wrap_content"
+            android:background="@drawable/receiver_msg_box1"
+            android:padding="15dp"
+            >
+
+            <RelativeLayout
+                android:id="@+id/message_area"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:id="@+id/friend_image_message"
+                    android:layout_width="200dp"
+                    android:layout_height="200dp"
+                    android:visibility="gone"
+                    />
+
+                <TextView
+
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/friend_text_message"
+                    android:maxWidth="280dp"
+                    android:visibility="gone"
+                    android:text="Hey, I am to Karachi, I will be back in a few days"
+                    android:textSize="20sp"
+                    android:textColor="@color/white"/>
+
+            </RelativeLayout>
+
+            <TextView
+
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/friend_time_stamp"
+                android:text="18:04"
+                android:layout_marginTop="5dp"
+                android:layout_below="@id/message_area"
+                android:textColor="@color/white"
+                android:textSize="18sp"
+                />
+
+        </RelativeLayout>
+    </LinearLayout>
+</RelativeLayout>

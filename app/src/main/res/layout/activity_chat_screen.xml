@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="fill_parent"
+    android:background="#1C1B1B"
+    android:layout_height="fill_parent">
+
+    <RelativeLayout
+        android:id="@+id/topbar"
+        android:layout_width="match_parent"
+        android:layout_height="90dp"
+        android:background="@drawable/box2"
+        >
+
+        <ImageView
+            android:id="@+id/back_button"
+            android:layout_centerVertical="true"
+            android:layout_width="40dp"
+            android:layout_marginLeft="10dp"
+            android:layout_height="40dp"
+            android:src="@drawable/back_arrow_button"
+            />
+
+        <RelativeLayout
+
+            android:layout_centerInParent="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:textSize="18sp"
+                android:id="@+id/messenger_name"
+                android:textColor="@color/white"
+                android:layout_height="wrap_content"
+                android:text="Ahsan Memon"/>
+
+            <TextView
+                android:layout_below="@id/messenger_name"
+                android:layout_width="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="10dp"
+                android:textSize="15sp"
+                android:textColor="@color/white"
+                android:layout_height="wrap_content"
+                android:text="Online now"/>
+
+
+
+        </RelativeLayout>
+
+        <ImageView
+            android:id="@+id/call_friend_btn"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_alignParentEnd="true"
+            android:src="@drawable/call_button"
+            android:layout_marginRight="15dp"
+            android:layout_centerVertical="true"
+            android:layout_alignParentRight="true" />
+
+    </RelativeLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/message_recycler_view"
+        android:layout_width="match_parent"
+        android:layout_height="fill_parent"
+        android:layout_above="@id/chat_box"
+        android:layout_below="@id/topbar"/>
+
+    <LinearLayout
+
+        android:layout_alignParentBottom="true"
+        android:id="@+id/chat_box"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"
+        android:layout_marginBottom="10dp"
+        android:orientation="horizontal"
+        android:layout_width="fill_parent"
+        android:background="@drawable/message_box"
+        android:layout_height="70dp"
+        android:paddingLeft="3dp"
+        android:paddingRight="10dp"
+        android:paddingBottom="2dp"
+        android:baselineAligned="true">
+        <ImageView
+            android:id="@+id/emoji_button"
+            android:layout_weight="1"
+            android:layout_width="30dp"
+            android:layout_height="50dp"
+            android:layout_gravity="center_vertical"
+
+            android:src="@drawable/ic_baseline_tag_faces_24"/>
+        <EditText
+            android:id="@+id/message_text"
+            android:layout_weight="8"
+            android:layout_width="0dp"
+            android:textColor="@color/white"
+            android:layout_height="match_parent"
+            android:hint="Type your message"
+            android:backgroundTint="#2B2B2B"
+            android:textColorHint="@color/white"
+            android:gravity="center_vertical"
+            />
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:layout_width="wrap_content"
+            android:visibility="gone"
+            android:id="@+id/send_button"
+            android:layout_gravity="center_vertical"
+            android:backgroundTint="#03A9F4"
+            android:tint="@color/white"
+            android:src="@drawable/send_button"
+            android:layout_height="wrap_content"/>
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/camera_button"
+
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+
+            android:layout_weight="0"
+            android:backgroundTint="#03A9F4"
+            android:src="@drawable/ic_baseline_camera_alt_24"
+            app:tint="@color/white"
+            tools:ignore="SpeakableTextPresentCheck"/>
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/mic_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="8dp"
+            android:layout_gravity="center"
+
+            android:layout_weight="0"
+            android:backgroundTint="#03A9F4"
+            android:src="@drawable/ic_baseline_mic_none_24"
+            app:tint="@color/white" tools:ignore="SpeakableTextPresentCheck"/>
+    </LinearLayout>
+</RelativeLayout>
