@@ -1,0 +1,151 @@
+<LinearLayout android:layout_height="match_parent"
+    android:layout_width="match_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+
+    android:background="#1C1B1B">
+
+    <LinearLayout
+        android:orientation="vertical"
+
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginLeft="40dp"
+        android:layout_marginRight="40dp">
+
+        <TextView
+
+
+            android:id="@+id/second_text"
+            android:layout_centerVertical="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Create your profile ."
+            android:fontFamily="@font/prompt_bold"
+            android:textColor="#939393"
+            android:textSize="20dp"
+
+            />
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:layout_marginTop="20dp"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:id="@+id/photo_input"
+            android:layout_gravity="center"
+            android:src="@drawable/ic_baseline_account_circle_24"
+            >
+
+        </de.hdodenhof.circleimageview.CircleImageView>
+
+
+
+        <EditText
+            android:layout_marginTop="20dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/fname_input"
+            android:hint="First Name"
+            android:textColor="#939393"
+            android:textColorHint="#939393"
+            android:fontFamily="@font/prompt_bold"
+            android:backgroundTint="#1C1B1B">
+
+        </EditText>
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#939393"/>
+
+        <EditText
+            android:layout_marginTop="20dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/lname_input"
+            android:hint="Last Name"
+            android:textColor="#939393"
+            android:textColorHint="#939393"
+            android:fontFamily="@font/prompt_bold"
+            android:backgroundTint="#1C1B1B">
+
+        </EditText>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#939393"/>
+
+        <TextView
+            android:id="@+id/gender_text"
+            android:layout_marginTop="20dp"
+            android:layout_centerVertical="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Select Gender"
+            android:fontFamily="@font/prompt_bold"
+            android:textColor="#939393"
+            android:textSize="20dp"
+            />
+        <RadioGroup
+            android:layout_marginTop="20dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+            <RadioButton
+                android:id="@+id/male"
+                android:text="Male"
+                android:fontFamily="@font/prompt_bold"
+                android:textColor="#939393"
+                android:textSize="20dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+            <RadioButton
+                android:id="@+id/female"
+                android:fontFamily="@font/prompt_bold"
+                android:text="Female"
+                android:textColor="#939393"
+                android:textSize="20dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+        </RadioGroup>
+
+        <EditText
+            android:layout_marginTop="20dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/bio_input"
+            android:hint="Edit Bio"
+            android:textColorHint="#939393"
+            android:textColor="#939393"
+            android:fontFamily="@font/prompt_bold"
+            android:backgroundTint="#1C1B1B">
+
+        </EditText>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#939393"/>
+
+        <Button
+            android:id="@+id/continue_btn"
+            android:layout_marginTop="30dp"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:textAllCaps="false"
+            android:fontFamily="@font/prompt_bold"
+            android:backgroundTint="#193155"
+            android:text="Continue"
+            >
+
+        </Button>
+
+
+
+
+
+    </LinearLayout>
+
+
+
+
+</LinearLayout>

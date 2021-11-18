@@ -1,5 +1,6 @@
 package com.ahsansaleem.i170303_i170364;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
@@ -8,18 +9,25 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
+import android.widget.Toast;
+
+import com.google.android.gms.tasks.OnCompleteListener;
+import com.google.android.gms.tasks.Task;
+import com.google.firebase.auth.AuthResult;
+import com.google.firebase.auth.FirebaseAuth;
 
 public class LoginActivity extends AppCompatActivity {
 
     TextView sign_up;
     Button log_in_btn;
-
+    FirebaseAuth mAuth;
     EditText email;
     EditText password;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        mAuth=FirebaseAuth.getInstance();
         setContentView(R.layout.activity_login);
         log_in_btn=findViewById(R.id.login_btn);
         sign_up = findViewById(R.id.sign_up_page);
@@ -27,8 +35,6 @@ public class LoginActivity extends AppCompatActivity {
         email = findViewById(R.id.email_input);
         password = findViewById(R.id.pass_input);
 
-        String[] emails = {"ahsanmemon288@gmail.com", "aqeelejaz238@gmail.com", "anonymous123@gmail.com"};
-        String[] passwords = {"user123", "user456", "user678"};
 
         sign_up.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -41,13 +47,29 @@ public class LoginActivity extends AppCompatActivity {
         log_in_btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if (emails[0].equalsIgnoreCase("ahsanmemon288@gmail.com") && passwords[0].equals("user123") && passwords[0].equals("user123")) {
 
-                    Intent intent = new Intent(LoginActivity.this, MainActivity.class);
-                    startActivity(intent);
+
+                if (areAllFielsFilled()) {
+
+                    mAuth.signInWithEmailAndPassword(email.getText().toString(), password.getText().toString()).addOnCompleteListener(
+                            LoginActivity.this, new OnCompleteListener<AuthResult>() {
+                                @Override
+                                public void onComplete(@NonNull Task<AuthResult> task) {
+                                    if (task.isSuccessful()) {
+                                        Toast.makeText(LoginActivity.this, "Login Success!.",
+                                                Toast.LENGTH_SHORT).show();
+                                        Intent intent = new Intent(LoginActivity.this, MainActivity.class);
+                                        startActivity(intent); // Go to main page
+                                    } else {
+                                        Toast.makeText(LoginActivity.this, "Authentication failed.",
+                                                Toast.LENGTH_SHORT).show();
+                                    }
+                                }
+                            });
                 }
             }
         });
+
 
     }
 

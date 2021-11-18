@@ -16,6 +16,8 @@ import android.widget.EditText;
 import android.widget.ImageView;
 
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
+import com.sinch.android.rtc.Sinch;
+import com.sinch.android.rtc.SinchClient;
 
 import java.util.ArrayList;
 
@@ -27,17 +29,25 @@ public class ChatScreenActivity extends AppCompatActivity {
     EditText messageText;
     MessageDBHandler dbHandler;
     FloatingActionButton send_btn, mic_btn, camera_btn;
+//    SinchClient sinchClient = Sinch.getSinchClientBuilder()
+//            .context(this)
+//            .userId("current-user-id")
+//            .applicationKey("1c232b71-9132-4aa2-84bf-b771a517b67c")
+//            .applicationSecret("ioby7BiLkUG5k+F3wmqUGQ==")
+//            .environmentHost("clientapi.sinch.com")
+//            .build();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_chat_screen);
 
-
+        
         call_friend_btn = findViewById(R.id.call_friend_btn);
         call_friend_btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+
                 startActivity(new Intent(ChatScreenActivity.this, CallActivity.class));
             }
         });

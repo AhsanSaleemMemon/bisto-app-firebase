@@ -4,13 +4,17 @@ package com.ahsansaleem.i170303_i170364;
 public class ContactProfile {
     private String contactName;
     private String contactPhone;
-
+    private String contactId;
     private int contactPhoto;
 
     public ContactProfile(String contactName, String contactPhone, int contactPhoto) {
         this.contactName = contactName;
         this.contactPhone = contactPhone;
         this.contactPhoto = contactPhoto;
+    }
+
+    public ContactProfile() {
+
     }
 
     public String getContactName() {
@@ -35,5 +39,13 @@ public class ContactProfile {
 
     public void setContactPhoto(int contactPhoto) {
         this.contactPhoto = contactPhoto;
+    }
+
+    public String getContactId() {
+        return contactId;
+    }
+
+    public void setContactId(String contactId) {
+        this.contactId = contactId;
     }
 }
